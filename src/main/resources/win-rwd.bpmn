@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1pst3bd" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:process id="WinWorldCup" name="Win World Cup" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Ireland Enters world cup">
+      <bpmn:outgoing>Flow_0nifhvk</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0nifhvk" sourceRef="StartEvent_1" targetRef="Activity_1efxh31" />
+    <bpmn:userTask id="Activity_1efxh31" name="Beat all teams">
+      <bpmn:incoming>Flow_0nifhvk</bpmn:incoming>
+      <bpmn:outgoing>Flow_0kc37mf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0srkhwe" name="Ireland wins">
+      <bpmn:incoming>Flow_0kc37mf</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0kc37mf" sourceRef="Activity_1efxh31" targetRef="Event_0srkhwe" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="WinWorldCup">
+      <bpmndi:BPMNEdge id="Flow_0nifhvk_di" bpmnElement="Flow_0nifhvk">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0kc37mf_di" bpmnElement="Flow_0kc37mf">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="432" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="166" y="142" width="69" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0rkftt8_di" bpmnElement="Activity_1efxh31">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0srkhwe_di" bpmnElement="Event_0srkhwe">
+        <dc:Bounds x="432" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="420" y="142" width="60" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
